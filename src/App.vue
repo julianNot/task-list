@@ -1,15 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <TasksListView />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TasksListView from '@/modules/todo/views/TasksListView.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TasksListView
   }
 }
 </script>
