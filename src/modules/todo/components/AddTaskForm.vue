@@ -1,7 +1,7 @@
 <template>
   <div>
-    <input v-model="titleNewTask" type="text">
-    <button @click="addNewTask">Crear</button>
+    <input placeholder="Ingresa tu nueva tarea" v-model="titleNewTask" class="input-task" type="text">
+    <button class="btn btn-create" @click="addNewTask">Crear</button>
   </div>
 </template>
 <script>
@@ -13,14 +13,16 @@ export default {
     }
   },
   methods: {
+    /* 
+      Emitir el valor ingresado por el usuario al componente padre
+      para crear una nueva tarea
+    */
     addNewTask() {
-      console.log('Add ',this.titleNewTask)
-      this.$emit('task-added', this.titleNewTask)
-      this.titleNewTask = ''
+      if(this.titleNewTask) {
+        this.$emit('task-added', this.titleNewTask)
+        this.titleNewTask = ''
+      }
     }
   }
 }
 </script>
-<style>
-  
-</style>

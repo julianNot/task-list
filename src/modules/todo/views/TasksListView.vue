@@ -1,6 +1,11 @@
 <template>
-  <img alt="Vue logo" src="../../../assets/logo.png">
-  <TaskList />
+  <div class="container">
+    <div>
+      <img alt="Vue logo" src="../../../assets/logo.png" width="150">
+      <h2>Task List App</h2>
+    </div>
+    <TaskList />
+  </div>
 </template>
 <script>
 import { mapActions } from 'vuex'
@@ -19,3 +24,12 @@ export default {
   }
 }
 </script>
+<style scoped>
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+</style>
